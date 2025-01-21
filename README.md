@@ -1,0 +1,1 @@
+# PNPM Workspaces Monorepo template
