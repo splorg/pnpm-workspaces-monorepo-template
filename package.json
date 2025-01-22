@@ -1,8 +1,7 @@
 {
-  "name": "pnpm-workspaces-monorepo-template",
-  "version": "1.0.0",
-  "description": "",
+  "name": "monorepo-template",
   "type": "module",
+  "version": "1.0.0",
   "scripts": {
     "prepare": "pnpm husky",
     "lint": "eslint .",
@@ -13,38 +12,21 @@
     "test": "pnpm run -r --parallel test",
     "deploy": "pnpm build && pnpm run -r deploy"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@9.14.1",
-  "engines": {
-    "npm": "please-use-pnpm",
-    "yarn": "please-use-pnpm",
-    "pnpm": ">=9.14.1",
-    "node": ">=22.11.0"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^19.6.1",
-    "@commitlint/config-conventional": "^19.6.0",
-    "@eslint/js": "^9.18.0",
-    "eslint": "^9.18.0",
-    "eslint-config-prettier": "^10.0.1",
-    "eslint-plugin-prettier": "^5.2.3",
-    "globals": "^15.14.0",
-    "husky": "^9.1.7",
-    "lint-staged": "^15.4.1",
-    "prettier": "^3.4.2",
-    "typescript-eslint": "^8.21.0"
-  },
   "dependencies": {
     "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0"
   },
+  "devDependencies": {
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "eslint": "^9.18.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.1"
+  },
   "lint-staged": {
     "**/*.{js,ts,tsx}": [
       "eslint --fix"
-    ],
-    "**/*": "prettier --write --ignore-unknown"
+    ]
   },
   "config": {
     "commitizen": {
