@@ -1,36 +1,24 @@
 {
-  "name": "monorepo-template",
-  "type": "module",
-  "version": "1.0.0",
-  "scripts": {
-    "prepare": "pnpm husky",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "format": "prettier --write .",
-    "dev": "pnpm run -r --parallel --aggregate-output dev",
-    "build": "pnpm run -r build",
-    "test": "pnpm run -r --parallel test",
-    "deploy": "pnpm build && pnpm run -r deploy"
-  },
-  "dependencies": {
-    "commitizen": "^4.3.1",
-    "cz-conventional-changelog": "^3.3.0"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^19.6.1",
-    "@commitlint/config-conventional": "^19.6.0",
-    "eslint": "^9.18.0",
-    "husky": "^9.1.7",
-    "lint-staged": "^15.4.1"
-  },
-  "lint-staged": {
-    "**/*.{js,ts,tsx}": [
-      "eslint --fix"
-    ]
-  },
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
-  }
+	"name": "monorepo-template",
+	"type": "module",
+	"version": "1.0.0",
+	"scripts": {
+		"dev": "pnpm run -r --parallel --aggregate-output dev",
+		"build": "pnpm run -r build",
+		"test": "pnpm run -r --parallel test",
+		"deploy": "pnpm build && pnpm run -r deploy"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@commitlint/cli": "^19.6.1",
+		"@commitlint/config-conventional": "^19.6.0",
+		"commitizen": "^4.3.1",
+		"cz-conventional-changelog": "^3.3.0",
+		"lefthook": "^1.10.10"
+	},
+	"config": {
+		"commitizen": {
+			"path": "cz-conventional-changelog"
+		}
+	}
 }
